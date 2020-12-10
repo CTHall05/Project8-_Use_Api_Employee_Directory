@@ -318,6 +318,11 @@ template {
   height: 100px;
   background-color: #ff8606; }
 
+.card:hover {
+  cursor: pointer;
+  background-color: #600538;
+  color: #ff8606 !important; }
+
 img.avatar {
   align-self: center;
   height: 75px;
@@ -338,6 +343,7 @@ img.avatar {
 .text-container {
   margin: 0;
   color: white;
+  margin: auto;
   display: flex;
   align-items: flex-start;
   justify-content: space-around;
@@ -412,6 +418,9 @@ body {
 @media (min-width: 1024px) {
   .grid-container {
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: repeat(3, 1fr); } }
+    grid-template-rows: repeat(3, 1fr); }
+
+  img.avatar {
+    margin: auto; } }
 
 /*# sourceMappingURL=style.css.map */
