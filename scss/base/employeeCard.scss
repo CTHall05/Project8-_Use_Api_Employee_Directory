@@ -15,6 +15,12 @@
   background-color: $secondary-color;
 }
 
+.card:hover {
+  cursor: pointer;
+  background-color: $primary-color;
+  color: $secondary-color !important;
+}
+
 img.avatar {
   align-self: center;
   height: 75px;
@@ -38,6 +44,7 @@ img.avatar {
 .text-container {
   margin: 0;
   color: $text-color;
+  margin: auto;
   display: flex;
   align-items: flex-start;
   justify-content: space-around;
