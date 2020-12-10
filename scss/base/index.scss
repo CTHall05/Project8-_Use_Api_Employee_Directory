@@ -1,0 +1,101 @@
+/* ============================================= */
+/* Base Imports */
+/* ============================================= */
+
+@import "normalize";
+@import "variables";
+@import "employeeCard";
+
+/* ============================================= */
+/* Grid Container && Base Body Styling */
+/* ============================================= */
+
+* {
+  font-family: "Architects Daughter", cursive, sans-serif;
+}
+
+body {
+  position: relative;
+  background-color: $body-color;
+}
+
+.grid-container {
+  display: grid;
+  justify-items: center;
+  padding-top: 1em;
+  grid-gap: 20px;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(12, 1fr);
+  grid-template-areas:
+    "header"
+    "main"
+    "searchBar";
+}
+
+.header {
+  display: grid;
+  grid-area: header;
+  margin: auto;
+  color: $secondary-color;
+  background-color: $primary-color;
+  text-align: center;
+  height: 100%;
+  width: 100%;
+}
+
+.header:hover {
+  cursor: pointer;
+}
+
+/* ============================================= */
+/* Base Overlay Styling */
+/* ============================================= */
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(100, 100, 100, 0.4);
+}
+
+.modal {
+  width: 375px;
+  margin: 15% auto auto;
+  position: relative;
+  text-align: center;
+  background: #fff;
+  border: 1px solid #778;
+  border-radius: 5px;
+  padding: 30px 20px;
+}
+
+.modal-close {
+  position: absolute;
+  right: 15px;
+  top: 5px;
+  cursor: pointer;
+}
+
+.hidden {
+  display: none;
+}
+
+// ================================= //
+//  Media Queries //
+// ================================= //
+
+@media (min-width: 768px) {
+  .grid-container {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(6, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .grid-container {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: repeat(3, 1fr);
+  }
+}
