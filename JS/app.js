@@ -9,6 +9,8 @@ const modalContainer = document.querySelector(".modal-content");
 const modalClose = document.querySelector(".modal-close");
 
 
+
+
 fetch(urlAPI)
 .then(res => res.json())
 .then(res => res.results)
@@ -82,3 +84,19 @@ modalClose.addEventListener('click', () => {
   overlay.classList.add("hidden");
 });
   
+
+// Search Bar Employee Filter //
+
+const searchBar = document.querySelector("searchTerm");
+let employeeName = document.querySelectorAll(".card h2");
+searchBar.addEventListener("keyup", (e) => {
+  const searchTerm = e.target.value.toLowerCase();
+  for (let i = 0; i < employeeName.length; i++) {
+    const searchInput = employeeName[i];
+    if (searchInput.toLowerCase().includes(searchTerm)) {
+      employeeName[i].parentNode.style.display = "";
+    } else {
+      employeeName[i].parentNode.style.display = "none";
+    }
+  }
+});
