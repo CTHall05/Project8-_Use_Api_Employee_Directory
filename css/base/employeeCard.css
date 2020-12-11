@@ -24,7 +24,8 @@ img.avatar {
   margin: 0;
   display: flex;
   font-size: 1rem;
-  align-items: flex-end; }
+  align-items: flex-end;
+  color: #e83b36; }
 
 .email,
 .address {
