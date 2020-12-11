@@ -4,6 +4,7 @@
 
 @import "normalize";
 @import "variables";
+@import "searchbar";
 @import "employeeCard";
 
 /* ============================================= */
@@ -62,26 +63,30 @@ body {
 
 .modal {
   width: 375px;
+  height: 300px;
   margin: 15% auto auto;
   position: relative;
   text-align: center;
   background: $primary-color;
+  border: 5px solid $secondary-color;
   border-radius: 10px;
   padding: 30px 20px;
 }
 
-.model-content {
+.modal-content > div {
   margin: 0;
-  color: $primary-color;
+  color: $text-color;
   margin: auto;
   display: flex;
-  align-items: flex-end;
-  justify-content: space-between;
+  align-items: center;
+  justify-content: space-around;
   flex-direction: column;
 }
 
 .modal-close {
   position: absolute;
+  width: 25px;
+  height: 20px;
   right: 15px;
   top: 10px;
   cursor: pointer;
@@ -89,6 +94,10 @@ body {
   color: $text-color;
   border: none;
   border-radius: 5px;
+}
+
+.modl-close:hover {
+  background-color: $body-color;
 }
 
 .hidden {
@@ -104,6 +113,10 @@ body {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: repeat(6, 1fr);
   }
+
+  .searchTerm {
+    width: 25%;
+  }
 }
 
 @media (min-width: 1024px) {
@@ -114,5 +127,9 @@ body {
 
   img.avatar {
     margin: auto;
+  }
+
+  .searchTerm {
+    width: 25%;
   }
 }
