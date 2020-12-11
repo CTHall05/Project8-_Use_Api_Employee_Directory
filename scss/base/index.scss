@@ -83,8 +83,12 @@ body {
 .modal-close {
   position: absolute;
   right: 15px;
-  top: 5px;
+  top: 10px;
   cursor: pointer;
+  background-color: $secondary-color;
+  color: $text-color;
+  border: none;
+  border-radius: 5px;
 }
 
 .hidden {
