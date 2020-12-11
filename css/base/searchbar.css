@@ -1,0 +1,32 @@
+.search {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px; }
+
+.searchTerm {
+  border: 2px solid #ff8606;
+  border-radius: 5px;
+  background-color: #e83b36;
+  color: white; }
+
+.searchTerm::placeholder {
+  color: white; }
+
+.searchButton {
+  width: 40px;
+  height: 28px;
+  border-radius: 5px;
+  border: 1px solid #ff8606;
+  background-color: #ff8606;
+  text-align: center;
+  cursor: pointer;
+  font-size: 20px; }
+
+.searchButton:hover {
+  background-color: #600538;
+  border-color: #600538; }
+
+.fa-search {
+  color: white; }
+
+/*# sourceMappingURL=searchbar.css.map */
