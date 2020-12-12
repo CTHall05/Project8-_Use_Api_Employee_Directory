@@ -62,13 +62,20 @@ function displayModal(index) {
   ${date.getMonth()}/${date.getDate()}/${date.getFullYear()}</p>
   </div>
   <div class="actions">
-    <div class="back">Back</div>
-    <div class="next">Next</div>
+    <button class="back">Back</button>
+    <button class="next">Next</button>
   </div> 
   `;  
 
   overlay.classList.remove("hidden");
   modalContainer.innerHTML = modalHTML;
+
+  const employeeModelCard = document.querySelector('.modal-content');
+  employeeModelCard.addEventListener('click', (e) => {
+    if (e.target.className == "next") {
+      
+    }
+  });
 }
 
 // ================================== //
@@ -109,7 +116,3 @@ searchBar.addEventListener("keyup", (e) => {
 
 // Next and Back Functionality //
 
-const employeeModelCard = document.getElementById('Next');
-employeeModelCard.addEventListener('click', (e) => {
-    console.log("ppop");
-});
