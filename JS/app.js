@@ -95,7 +95,7 @@ searchBar.addEventListener("keyup", (e) => {
   for (let i = 0; i < employeeName.length; i++) {
     const searchInput = employeeName[i].textContent;
     if (searchInput.toLowerCase().includes(searchTerm)) {
-      employeeName[i].parentNode.style.display = "";
+      employeeName[i].parentNode.parentNode.style.display = "";
     } else {
       employeeName[i].parentNode.parentNode.style.display = "none";
     }
