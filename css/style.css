@@ -426,7 +426,7 @@ body {
 
 .modal {
   width: 375px;
-  height: 300px;
+  height: 320px;
   margin: 15% auto auto;
   position: relative;
   text-align: center;
@@ -436,13 +436,13 @@ body {
   padding: 30px 20px; }
 
 .modal-content > div {
-  margin: 0;
+  height: 100%;
   color: white;
   margin: auto;
+  margin-bottom: 5px;
   display: flex;
   align-items: center;
-  justify-content: space-around;
-  flex-direction: column; }
+  justify-content: space-between; }
 
 .modal-close {
   position: absolute;
@@ -456,8 +456,13 @@ body {
   border: none;
   border-radius: 5px; }
 
-.modl-close:hover {
+.modal-close:hover {
   background-color: #e83b36; }
+
+.next:hover,
+.back:hover {
+  color: #ff8606;
+  cursor: pointer; }
 
 .hidden {
   display: none; }
