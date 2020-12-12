@@ -63,7 +63,7 @@ body {
 
 .modal {
   width: 375px;
-  height: 300px;
+  height: 320px;
   margin: 15% auto auto;
   position: relative;
   text-align: center;
@@ -74,13 +74,13 @@ body {
 }
 
 .modal-content > div {
-  margin: 0;
+  height: 100%;
   color: $text-color;
   margin: auto;
+  margin-bottom: 5px;
   display: flex;
   align-items: center;
-  justify-content: space-around;
-  flex-direction: column;
+  justify-content: space-between;
 }
 
 .modal-close {
@@ -96,8 +96,14 @@ body {
   border-radius: 5px;
 }
 
-.modl-close:hover {
+.modal-close:hover {
   background-color: $body-color;
+}
+
+.next:hover,
+.back:hover {
+  color: $secondary-color;
+  cursor: pointer;
 }
 
 .hidden {
