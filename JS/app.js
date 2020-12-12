@@ -88,15 +88,16 @@ modalClose.addEventListener('click', () => {
 // Search Bar Employee Filter //
 
 const searchBar = document.querySelector(".searchTerm");
-let employeeName = document.querySelectorAll(".name");
+
 searchBar.addEventListener("keyup", (e) => {
   const searchTerm = e.target.value.toLowerCase();
+  let employeeName = document.querySelectorAll(".name");
   for (let i = 0; i < employeeName.length; i++) {
     const searchInput = employeeName[i].textContent;
-    if (searchInput.toLowerCase() === searchTerm) {
+    if (searchInput.toLowerCase().includes(searchTerm)) {
       employeeName[i].parentNode.style.display = "";
     } else {
-      employeeName[i].parentNode.style.display = "none";
+      employeeName[i].parentNode.parentNode.style.display = "none";
     }
   }
 });
