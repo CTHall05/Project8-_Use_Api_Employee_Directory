@@ -52,7 +52,7 @@ function displayModal(index) {
   const modalHTML = `
   <img class="avatar" src="${picture.large}" />
   <div class="text-container">
-  <h2 class="name">${name.first} ${name.last}</h2>
+  <h2>${name.first} ${name.last}</h2>
   <p class="email">${email}</p>
   <p class="address">${city}</p>
   <hr />
@@ -61,6 +61,10 @@ function displayModal(index) {
   <p>Birthday:
   ${date.getMonth()}/${date.getDate()}/${date.getFullYear()}</p>
   </div>
+  <div class="actions">
+    <div class="back">Back</div>
+    <div class="next">Next</div>
+  </div> 
   `;  
 
   overlay.classList.remove("hidden");
@@ -100,4 +104,12 @@ searchBar.addEventListener("keyup", (e) => {
       employeeName[i].parentNode.parentNode.style.display = "none";
     }
   }
+});
+
+
+// Next and Back Functionality //
+
+const employeeModelCard = document.getElementById('Next');
+employeeModelCard.addEventListener('click', (e) => {
+    console.log("ppop");
 });
