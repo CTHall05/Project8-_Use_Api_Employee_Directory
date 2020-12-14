@@ -73,11 +73,11 @@ function displayModal(index) {
   const employeeModelCard = document.querySelector('.modal-content');
   employeeModelCard.addEventListener('click', (e) => {
     if (e.target.className == "next") {
-      const parent = employeeModelCard.parentElement.innerHTML;
-      const nextCardIndex = parseInt(parent) + 1;
-
-      displayModal(nextCardIndex);
-    }
+      displayModal(parseInt(index += 1));
+    } else if (e.target.className == "back") {
+      displayModal(parseInt(index -= 1));
+    } else if (e.target.className == "next" && displayModal(parseInt(index = 11)))
+      displayModal(parseInt(index += 0))
   });
 }
 
