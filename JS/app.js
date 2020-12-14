@@ -71,13 +71,26 @@ function displayModal(index) {
   modalContainer.innerHTML = modalHTML;
 
   const employeeModelCard = document.querySelector('.modal-content');
+  // employeeModelCard.addEventListener('click', (e) => {
+  //   if (e.target.className == "next") {
+  //     displayModal(parseInt(index += 1));
+  //   } else if (e.target.className == "back") {
+  //     displayModal(parseInt(index -= 1));
+  //   } else if (displayModal(parseInt(index === employees.length))) {
+  //     displayModal(parseInt(index === 1 ))
+  //   }
+  // });
   employeeModelCard.addEventListener('click', (e) => {
-    if (e.target.className == "next") {
-      displayModal(parseInt(index += 1));
-    } else if (e.target.className == "back") {
-      displayModal(parseInt(index -= 1));
-    } else if (e.target.className == "next" && displayModal(parseInt(index = 11)))
-      displayModal(parseInt(index += 0))
+    if (e.target.className == "next" && index < employees.length + 1) {
+      displayModal(index + 1); 
+    } else {
+      displayModal(0);
+    }
+    if (e.target.className == "back" && index > 0) {
+      displayModal(index - 1); 
+    } else {
+      displayModal(employees.length - 1);
+    }
   });
 }
 
@@ -90,7 +103,7 @@ gridContainer.addEventListener('click', e => {
   if (e.target !== gridContainer) {
   const card = e.target.closest(".card");
   const index = card.getAttribute('data-index');
-  displayModal(index);
+  displayModal(parseInt(index));
   }
 });
 
