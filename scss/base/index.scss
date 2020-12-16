@@ -62,8 +62,8 @@ body {
 }
 
 .modal {
-  width: 375px;
-  height: 320px;
+  width: 250px;
+  height: 330px;
   margin: 15% auto auto;
   position: relative;
   text-align: center;
@@ -131,6 +131,18 @@ body {
   .searchTerm {
     width: 25%;
   }
+
+  .modal {
+    width: 375px;
+    height: 320px;
+    margin: 15% auto auto;
+    position: relative;
+    text-align: center;
+    background: $primary-color;
+    border: 5px solid $secondary-color;
+    border-radius: 10px;
+    padding: 30px 20px;
+  }
 }
 
 @media (min-width: 1024px) {
@@ -145,5 +157,17 @@ body {
 
   .searchTerm {
     width: 25%;
+  }
+
+  .modal {
+    width: 375px;
+    height: 320px;
+    margin: 15% auto auto;
+    position: relative;
+    text-align: center;
+    background: $primary-color;
+    border: 5px solid $secondary-color;
+    border-radius: 10px;
+    padding: 30px 20px;
   }
 }
