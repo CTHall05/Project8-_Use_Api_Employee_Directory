@@ -69,29 +69,7 @@ function displayModal(index) {
 
   overlay.classList.remove("hidden");
   modalContainer.innerHTML = modalHTML;
-
-  const employeeModelCard = document.querySelector('.modal-content');
-  // employeeModelCard.addEventListener('click', (e) => {
-  //   if (e.target.className == "next") {
-  //     displayModal(parseInt(index += 1));
-  //   } else if (e.target.className == "back") {
-  //     displayModal(parseInt(index -= 1));
-  //   } else if (displayModal(parseInt(index === employees.length))) {
-  //     displayModal(parseInt(index === 1 ))
-  //   }
-  // });
-  employeeModelCard.addEventListener('click', (e) => {
-    if (e.target.className == "next" && index < employees.length + 1) {
-      displayModal(index + 1); 
-    } else {
-      displayModal(0);
-    }
-    if (e.target.className == "back" && index > 0) {
-      displayModal(index - 1); 
-    } else {
-      displayModal(employees.length - 1);
-    }
-  });
+  return index;
 }
 
 // ================================== //
@@ -102,8 +80,9 @@ gridContainer.addEventListener('click', e => {
   // make sure the click is not on the gridContainer itself
   if (e.target !== gridContainer) {
   const card = e.target.closest(".card");
-  const index = card.getAttribute('data-index');
-  displayModal(parseInt(index));
+  const index = parseInt(card.getAttribute('data-index'));
+  displayModal(index);
+  navigation(index);
   }
 });
 
@@ -131,4 +110,27 @@ searchBar.addEventListener("keyup", (e) => {
 
 
 // Next and Back Functionality //
+const navigation = index => {
+  const employeeModelCard = document.querySelector('.modal-content');
+  employeeModelCard.addEventListener('click', (e) => {
+    if (e.target.className == "next") {
+      if (index < employees.length - 1) {
+        index++;
+        displayModal(index);
+      } else {
+        index = 0;
+        displayModal(index);
+      }
+    }
+    if (e.target.className == "back") {
+      if (index > 0) {
+        index--;
+        displayModal(index);
+      } else {
+        index = employees.length - 1;
+        displayModal(index);
+      }
+    }
+  });
+};
 
