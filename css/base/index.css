@@ -423,8 +423,8 @@ body {
   background: rgba(100, 100, 100, 0.4); }
 
 .modal {
-  width: 375px;
-  height: 320px;
+  width: 250px;
+  height: 330px;
   margin: 15% auto auto;
   position: relative;
   text-align: center;
@@ -478,7 +478,18 @@ body {
     grid-template-rows: repeat(6, 1fr); }
 
   .searchTerm {
-    width: 25%; } }
+    width: 25%; }
+
+  .modal {
+    width: 375px;
+    height: 320px;
+    margin: 15% auto auto;
+    position: relative;
+    text-align: center;
+    background: #600538;
+    border: 5px solid #ff8606;
+    border-radius: 10px;
+    padding: 30px 20px; } }
 @media (min-width: 1024px) {
   .grid-container {
     grid-template-columns: 1fr 1fr 1fr;
@@ -488,6 +499,17 @@ body {
     margin: auto; }
 
   .searchTerm {
-    width: 25%; } }
+    width: 25%; }
+
+  .modal {
+    width: 375px;
+    height: 320px;
+    margin: 15% auto auto;
+    position: relative;
+    text-align: center;
+    background: #600538;
+    border: 5px solid #ff8606;
+    border-radius: 10px;
+    padding: 30px 20px; } }
 
 /*# sourceMappingURL=index.css.map */
